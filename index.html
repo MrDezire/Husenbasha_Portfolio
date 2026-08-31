@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Husenabasha M S - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <a href="#home">Husenabasha M S</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="linkedinprofile.png" 
+     alt="Profile Photo" 
+     class="profile-photo" 
+     style="width:120px; height:120px; border-radius:50%; object-fit:cover; display:block;" />
+
+
+                <div class="hero-text">
+                    <h1 class="hero-title fade-in">Husenabasha Mahammad Sompur</h1>
+                    <h2 class="hero-subtitle fade-in">Hi, I'm Husenabasha M S – Aspiring Engineer | Developer | Innovator</h2>
+                    <p class="hero-description fade-in">Passionate about Electronics, AI, IoT, and Software Development. I love building innovative projects that connect hardware and software.</p>
+                    <div class="hero-buttons fade-in">
+                        <a href="#projects" class="btn btn--primary">View My Work</a>
+                        <a href="#" class="btn btn--outline download-resume-btn">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>Education</h3>
+                    <p>B.Tech ECE, K L University (3rd year)</p>
+                    <p class="graduation-info">Expected Graduation: 2026</p>
+                </div>
+                <div class="about-card">
+                    <h3>Interests</h3>
+                    <ul class="interests-list">
+                        <li>Electronics</li>
+                        <li>Embedded Systems (ESP32, IoT)</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Web Development</li>
+                    </ul>
+                </div>
+                <div class="about-card">
+                    <h3>Career Goal</h3>
+                    <p>To innovate in AI + Embedded Systems for real-world applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">Flask</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>IoT/Embedded</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ESP32</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">PIR Sensors</span>
+                        <span class="skill-tag">LDR</span>
+                        <span class="skill-tag">Ultrasonic</span>
+                        <span class="skill-tag">MPU6050</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI/ML</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python ML Libraries</span>
+                        <span class="skill-tag">NVIDIA DLI</span>
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">LangChain</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Networking</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Routing Basics</span>
+                        <span class="skill-tag">QoS</span>
+                        <span class="skill-tag">Cisco GNS3</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Multisim</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">PyCharm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-project="0">
+                    <h3>Automatic Headlight Adjustment System</h3>
+                    <p>Smart headlight system that automatically adjusts based on ambient light and distance detection</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">Servo</span>
+                        <span class="tech-tag">Relay</span>
+                        <span class="tech-tag">LDR</span>
+                        <span class="tech-tag">Ultrasonic</span>
+                    </div>
+                    <div class="project-cta">
+                        <button class="btn btn--sm btn--primary">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-project="1">
+                    <h3>Gesture-Controlled Device</h3>
+                    <p>Device controlled through hand gestures using motion sensing technology</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">MPU6050</span>
+                    </div>
+                    <div class="project-cta">
+                        <button class="btn btn--sm btn--primary">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-project="2">
+                    <h3>Attendance Management System</h3>
+                    <p>Automated attendance tracking system using motion detection and fingerprint authentication</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">PIR</span>
+                        <span class="tech-tag">Fingerprint sensor</span>
+                    </div>
+                    <div class="project-cta">
+                        <button class="btn btn--sm btn--primary">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-project="3">
+                    <h3>Seed-Planting Drone for Reforestation</h3>
+                    <p>Concept prototype for automated seed planting to support reforestation efforts</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Concept prototype</span>
+                    </div>
+                    <div class="project-cta">
+                        <button class="btn btn--sm btn--primary">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-project="4">
+                    <h3>MIMO QPSK System Simulation</h3>
+                    <p>Performance analysis of MIMO communication system comparing ZF vs LMMSE BER</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">ZF vs LMMSE BER analysis</span>
+                    </div>
+                    <div class="project-cta">
+                        <button class="btn btn--sm btn--primary">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-project="5">
+                    <h3>Load Balancer Implementation</h3>
+                    <p>Network load balancer implementing Round Robin and Least Connection algorithms</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Networking</span>
+                    </div>
+                    <div class="project-cta">
+                        <button class="btn btn--sm btn--primary">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card" data-project="6">
+                    <h3>AI Image Segmentation Deployment</h3>
+                    <p>Web application for image segmentation using AI models</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">NVIDIA DLI</span>
+                        <span class="tech-tag">AI</span>
+                    </div>
+                    <div class="project-cta">
+                        <button class="btn btn--sm btn--primary">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card featured-cert">
+                    <div class="cert-icon">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="80" height="60" rx="4" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2"/>
+                            <circle cx="30" cy="35" r="8" fill="var(--color-primary)"/>
+                            <rect x="45" y="30" width="35" height="3" fill="var(--color-text-secondary)"/>
+                            <rect x="45" y="37" width="25" height="2" fill="var(--color-text-secondary)"/>
+                            <rect x="15" y="50" width="70" height="2" fill="var(--color-border)"/>
+                            <rect x="15" y="55" width="50" height="2" fill="var(--color-border)"/>
+                            <rect x="15" y="60" width="60" height="2" fill="var(--color-border)"/>
+                            <polygon points="50,85 45,90 55,90" fill="var(--color-primary)"/>
+                            <rect x="48" y="70" width="4" height="15" fill="var(--color-primary)"/>
+                            <circle cx="75" cy="25" r="3" fill="var(--color-warning)"/>
+                            <text x="77" y="27" font-size="4" fill="var(--color-btn-primary-text)">★</text>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-badge">New</div>
+                        <h3>Prompt Engineering & Programming with OpenAI</h3>
+                        <p class="cert-issuer">Columbia University</p>
+                        <p class="cert-date">2025</p>
+                        <p class="cert-description">Advanced certification covering effective prompt design, OpenAI API programming, and building LLM-powered solutions using Python. Includes hands-on projects with LangChain and OpenAI for automating workflows and real-world prompt engineering applications.</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="80" height="60" rx="4" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2"/>
+                            <circle cx="30" cy="35" r="8" fill="var(--color-primary)"/>
+                            <rect x="45" y="30" width="35" height="3" fill="var(--color-text-secondary)"/>
+                            <rect x="45" y="37" width="25" height="2" fill="var(--color-text-secondary)"/>
+                            <rect x="15" y="50" width="70" height="2" fill="var(--color-border)"/>
+                            <rect x="15" y="55" width="50" height="2" fill="var(--color-border)"/>
+                            <rect x="15" y="60" width="60" height="2" fill="var(--color-border)"/>
+                            <polygon points="50,85 45,90 55,90" fill="var(--color-primary)"/>
+                            <rect x="48" y="70" width="4" height="15" fill="var(--color-primary)"/>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Python Development Internship</h3>
+                        <p class="cert-issuer">TechnoHacks</p>
+                        <p class="cert-date">May–June 2025</p>
+                        <p class="cert-description">Comprehensive internship program covering Python programming, web development, and software engineering practices.</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="80" height="60" rx="4" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2"/>
+                            <circle cx="30" cy="35" r="8" fill="var(--color-primary)"/>
+                            <rect x="45" y="30" width="35" height="3" fill="var(--color-text-secondary)"/>
+                            <rect x="45" y="37" width="25" height="2" fill="var(--color-text-secondary)"/>
+                            <rect x="15" y="50" width="70" height="2" fill="var(--color-border)"/>
+                            <rect x="15" y="55" width="50" height="2" fill="var(--color-border)"/>
+                            <rect x="15" y="60" width="60" height="2" fill="var(--color-border)"/>
+                            <polygon points="50,85 45,90 55,90" fill="var(--color-primary)"/>
+                            <rect x="48" y="70" width="4" height="15" fill="var(--color-primary)"/>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3>AI for Business</h3>
+                        <p class="cert-issuer">Columbia University (Coursera)</p>
+                        <p class="cert-date">2025</p>
+                        <p class="cert-description">Professional certificate program focusing on artificial intelligence applications in business environments and strategic decision making.</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="80" height="60" rx="4" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2"/>
+                            <circle cx="30" cy="35" r="8" fill="var(--color-primary)"/>
+                            <rect x="45" y="30" width="35" height="3" fill="var(--color-text-secondary)"/>
+                            <rect x="45" y="37" width="25" height="2" fill="var(--color-text-secondary)"/>
+                            <rect x="15" y="50" width="70" height="2" fill="var(--color-border)"/>
+                            <rect x="15" y="55" width="50" height="2" fill="var(--color-border)"/>
+                            <rect x="15" y="60" width="60" height="2" fill="var(--color-border)"/>
+                            <polygon points="50,85 45,90 55,90" fill="var(--color-primary)"/>
+                            <rect x="48" y="70" width="4" height="15" fill="var(--color-primary)"/>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Accenture Software Engineering Job Simulation</h3>
+                        <p class="cert-issuer">Forage</p>
+                        <p class="cert-date">2025</p>
+                        <p class="cert-description">Practical simulation of software engineering tasks and methodologies used in professional software development environments.</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="20" width="80" height="60" rx="4" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2"/>
+                            <circle cx="30" cy="35" r="8" fill="var(--color-primary)"/>
+                            <rect x="45" y="30" width="35" height="3" fill="var(--color-text-secondary)"/>
+                            <rect x="45" y="37" width="25" height="2" fill="var(--color-text-secondary)"/>
+                            <rect x="15" y="50" width="70" height="2" fill="var(--color-border)"/>
+                            <rect x="15" y="55" width="50" height="2" fill="var(--color-border)"/>
+                            <rect x="15" y="60" width="60" height="2" fill="var(--color-border)"/>
+                            <polygon points="50,85 45,90 55,90" fill="var(--color-primary)"/>
+                            <rect x="48" y="70" width="4" height="15" fill="var(--color-primary)"/>
+                        </svg>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Image Segmentation with AI</h3>
+                        <p class="cert-issuer">NVIDIA DLI</p>
+                        <p class="cert-date">2025</p>
+                        <p class="cert-description">Specialized certification in deep learning techniques for computer vision and image segmentation applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-list">
+                <div class="achievement-item">
+                    <div class="achievement-icon">✓</div>
+                    <p>Strong foundation in Data Structures & Algorithms (Java + Python)</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">✓</div>
+                    <p>Worked on multiple IoT hardware-software integration projects</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">✓</div>
+                    <p>Actively learning wireless communication, networking, and embedded systems</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">✓</div>
+                    <p>Active GitHub contributor with portfolio of technical projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always open to discussing new opportunities, collaborations, or interesting projects. Feel free to reach out!</p>
+                    <div class="contact-links">
+                        <a href="mailto:husenbashasompur294@gmail.com" class="contact-link">
+                            <span class="contact-icon">📧</span>
+                            husenbashasompur294@gmail.com
+                        </a>
+                        <a href="tel:+919731800448" class="contact-link">
+                            <span class="contact-icon">📱</span>
+                            +91 9731800448
+                        </a>
+                        <a href="https://www.linkedin.com/in/husenbasha-sompur-329570292" class="contact-link" target="_blank">
+                            <span class="contact-icon">💼</span>
+                            LinkedIn Profile
+                        </a>
+                        <a href="https://github.com/MrDezire" class="contact-link" target="_blank">
+                            <span class="contact-icon">💻</span>
+                            GitHub Profile
+                        </a>
+                    </div>
+                    <a href="#" class="btn btn--primary download-resume-btn">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Husenabasha Mahammad Sompur. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal hidden" id="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <button class="modal-close" id="modal-close" aria-label="Close modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="project-detail-section">
+                    <h3>Project Overview</h3>
+                    <p id="modal-description"></p>
+                </div>
+                <div class="project-detail-section">
+                    <h3>Technologies Used</h3>
+                    <div class="modal-tech-tags" id="modal-tech-tags"></div>
+                </div>
+                <div class="project-detail-section">
+                    <h3>Objectives</h3>
+                    <ul id="modal-objectives"></ul>
+                </div>
+                <div class="project-detail-section">
+                    <h3>Implementation</h3>
+                    <p id="modal-implementation"></p>
+                </div>
+                <div class="project-detail-section">
+                    <h3>Results</h3>
+                    <p id="modal-results"></p>
+                </div>
+                <div class="project-detail-section">
+                    <h3>Screenshots & Resources</h3>
+                    <div class="project-screenshots">
+                        <div class="screenshot-placeholder">
+                            <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="80" fill="var(--color-secondary)" rx="4"/>
+                                <circle cx="50" cy="40" r="15" fill="var(--color-text-secondary)"/>
+                                <polygon points="42,48 50,35 58,48" fill="var(--color-background)"/>
+                                <circle cx="70" cy="25" r="5" fill="var(--color-text-secondary)"/>
+                            </svg>
+                            <p>Project Screenshot</p>
+                        </div>
+                        <div class="screenshot-placeholder">
+                            <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="80" fill="var(--color-secondary)" rx="4"/>
+                                <circle cx="50" cy="40" r="15" fill="var(--color-text-secondary)"/>
+                                <polygon points="42,48 50,35 58,48" fill="var(--color-background)"/>
+                                <circle cx="70" cy="25" r="5" fill="var(--color-text-secondary)"/>
+                            </svg>
+                            <p>System Diagram</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn btn--primary" id="modal-github" target="_blank">
+                        <span>💻</span>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
