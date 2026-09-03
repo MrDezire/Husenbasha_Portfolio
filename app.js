@@ -1,109 +1,94 @@
-// Project data with correct GitHub URLs
+// Project data (6 featured projects). `github: null` hides the repo link in the modal.
 const projectData = [
     {
-        "title": "Automatic Headlight Adjustment System",
-        "description": "Smart headlight system that automatically adjusts based on ambient light and distance detection",
-        "technologies": ["ESP32", "Servo", "Relay", "LDR", "Ultrasonic"],
-        "detailedDescription": "An intelligent automotive system that enhances driving safety by automatically adjusting headlight intensity and direction based on environmental conditions. The system uses LDR sensors to detect ambient light levels and ultrasonic sensors to measure distance to oncoming vehicles or obstacles.",
+        "title": "Autonomous 5G Network Operations Center (NOC)",
+        "description": "AI-driven NOC for a Free5GC and UERANSIM 5G network with a Llama 3.1 8B RAG layer and dual web dashboards",
+        "technologies": ["Free5GC", "UERANSIM", "Llama 3.1", "RAG", "Python"],
+        "detailedDescription": "A self-operating Network Operations Center that continuously monitors and manages a full 5G standalone network built on Free5GC core network functions and UERANSIM-simulated gNodeBs and UEs. A locally hosted Llama 3.1 8B model, augmented with a retrieval-augmented generation pipeline over 3GPP specifications, network configuration files, and live telemetry, interprets faults and recommends or applies corrective actions without operator intervention.",
         "objectives": [
-            "Improve nighttime driving safety",
-            "Reduce glare for oncoming traffic",
-            "Automate headlight adjustment process",
-            "Integrate multiple sensor technologies"
+            "Automate detection and diagnosis of 5G core and RAN faults",
+            "Ground an on-premise LLM in network context using RAG for accurate remediation",
+            "Provide operators and engineers with separate real-time monitoring dashboards",
+            "Eliminate reliance on paid cloud AI services for network operations"
         ],
-        "implementation": "Built using ESP32 microcontroller as the main processing unit, integrated with servo motors for precise headlight positioning, relay modules for controlling high/low beam switching, LDR sensors for ambient light detection, and ultrasonic sensors for distance measurement. The system processes sensor data in real-time and makes intelligent decisions about headlight adjustments.",
-        "results": "Successfully demonstrated automatic headlight adjustment with 95% accuracy in various lighting conditions. Reduced manual intervention and improved overall driving experience.",
-        "github": "https://github.com/MrDezire/headlight-system"
+        "implementation": "Deployed Free5GC control-plane and user-plane functions alongside UERANSIM to emulate radio access and subscriber traffic. Built a Python monitoring service that collects metrics and logs from each network function and streams them into a vector store; a RAG pipeline retrieves relevant specification and configuration context and feeds it to a locally served Llama 3.1 8B model that produces structured remediation steps. Two web dashboards were developed - an operations view for live KPIs and alarms, and an engineering view for deep telemetry and AI decision logs.",
+        "results": "Successfully demonstrated autonomous recovery from common core-network and session-establishment failures with minimal human input, running as a fully offline AI operations stack with no reliance on paid cloud services.",
+        "github": null
     },
     {
-        "title": "Gesture-Controlled Device",
-        "description": "Device controlled through hand gestures using motion sensing technology",
-        "technologies": ["ESP32", "MPU6050"],
-        "detailedDescription": "An innovative human-computer interface system that enables device control through intuitive hand gestures. The system recognizes various hand movements and translates them into device commands, providing a touchless interaction experience.",
+        "title": "Open5GS 5G NOC & Web Dashboard",
+        "description": "Independent Open5GS 5G Core deployment with a web-based NOC dashboard for monitoring and management",
+        "technologies": ["Open5GS", "Flask", "Web Dashboard"],
+        "detailedDescription": "A standalone 5G core network built on Open5GS, paired with a purpose-built Network Operations Center dashboard that gives a single-pane view of network health. The dashboard surfaces subscriber registrations, session activity, and network-function status, and provides controls for common administrative tasks such as subscriber provisioning and function restarts.",
         "objectives": [
-            "Create intuitive gesture-based control",
-            "Implement real-time motion recognition",
-            "Develop responsive user interface",
-            "Ensure reliable gesture detection"
+            "Stand up a reproducible Open5GS 5G standalone core",
+            "Expose real-time network-function and subscriber status through a web UI",
+            "Enable routine network management tasks without command-line access",
+            "Compare operational behavior against a parallel Free5GC deployment"
         ],
-        "implementation": "Utilized ESP32 microcontroller paired with MPU6050 accelerometer and gyroscope sensor for precise motion detection. Implemented custom algorithms for gesture recognition and filtering to eliminate false positives. The system processes motion data at high frequency to ensure responsive control.",
-        "results": "Achieved 90% gesture recognition accuracy with response time under 100ms. Successfully demonstrated control of various electronic devices through gesture commands.",
-        "github": "https://github.com/MrDezire/gesture-control"
+        "implementation": "Configured the full Open5GS control and user plane, including AMF, SMF, UPF, and the subscriber database. A Flask backend polls Open5GS management interfaces and its MongoDB store, normalizes the data, and serves it to a responsive dashboard through a REST API and periodic refresh. Administrative endpoints wrap subscriber CRUD operations and service control.",
+        "results": "Delivered a working Open5GS core with end-to-end registration and data sessions, monitored and managed entirely through the dashboard instead of manual command-line workflows.",
+        "github": null
     },
     {
-        "title": "Attendance Management System",
-        "description": "Automated attendance tracking system using motion detection and fingerprint authentication",
-        "technologies": ["ESP32", "PIR", "Fingerprint sensor"],
-        "detailedDescription": "A comprehensive attendance management solution that combines motion detection and biometric authentication to automatically track and record attendance. The system provides secure, accurate, and efficient attendance monitoring for educational institutions.",
+        "title": "Autonomous Rover using ROS2 Jazzy",
+        "description": "Autonomous ground rover built on ROS2 Jazzy with sensor fusion, navigation, and hardware/software integration",
+        "technologies": ["ROS2 Jazzy", "Raspberry Pi 5", "Sensors", "Navigation"],
+        "detailedDescription": "A four-wheeled autonomous rover that perceives its surroundings, builds a map, and navigates to goal positions while avoiding obstacles. The software stack is organized as ROS2 Jazzy nodes running on a Raspberry Pi 5, integrating motor control, sensor drivers, localization, and path planning.",
         "objectives": [
-            "Automate attendance tracking process",
-            "Ensure secure biometric authentication",
-            "Reduce manual errors and time consumption",
-            "Provide real-time attendance monitoring"
+            "Integrate motors, sensors, and compute into a reliable robot platform",
+            "Implement mapping, localization, and autonomous navigation with ROS2",
+            "Achieve robust obstacle avoidance in indoor environments",
+            "Build a modular architecture that supports adding new sensors"
         ],
-        "implementation": "Developed using ESP32 as the central controller, integrated PIR sensors for motion detection to trigger the system, and fingerprint sensors for secure user authentication. Implemented database connectivity for storing and retrieving attendance records with timestamp information.",
-        "results": "Reduced attendance taking time by 80% and eliminated manual errors. System successfully handles 100+ users with 99% authentication accuracy.",
-        "github": "https://github.com/MrDezire/attendance-system"
+        "implementation": "Assembled the drive base with motor drivers controlled through a ROS2 hardware interface node on a Raspberry Pi 5. Integrated range and inertial sensors, fused their data for odometry and obstacle detection, and used the ROS2 navigation stack for costmap generation, global planning, and local trajectory control. Nodes communicate over standard ROS2 topics and actions for teleoperation and autonomous goals.",
+        "results": "Deployed and tested on a physical rover: it navigated cluttered indoor spaces to commanded waypoints while avoiding obstacles, and the modular node design allowed new sensors to be added with minimal changes to the rest of the stack.",
+        "github": null
     },
     {
-        "title": "Seed-Planting Drone for Reforestation",
-        "description": "Concept prototype for automated seed planting to support reforestation efforts",
-        "technologies": ["Concept prototype"],
-        "detailedDescription": "An environmental technology concept designed to address deforestation challenges through automated aerial seed planting. The drone system is designed to efficiently plant seeds in large areas, supporting reforestation and environmental conservation efforts.",
+        "title": "SENTINEL-5G (Ongoing Capstone Project)",
+        "description": "Ongoing capstone: telecom security framework combining honeypot deception, ML attacker profiling, and LLM-powered patch synthesis for 5G infrastructure",
+        "technologies": ["free5GC", "Ollama", "Machine Learning", "Honeypot", "LLM"],
+        "detailedDescription": "An in-progress capstone project building a defensive security framework for 5G core infrastructure. The intended design lures attackers into instrumented honeypots, profiles their behavior with machine learning, and uses a locally hosted LLM to draft candidate patches and mitigations. The stack is built entirely on free and open components - free5GC for the target core and Ollama running Llama 3 or Mistral for analysis - so it carries no paid dependencies.",
         "objectives": [
-            "Address deforestation challenges",
-            "Automate large-scale seed planting",
-            "Improve reforestation efficiency",
-            "Support environmental conservation"
+            "Detect and observe attacks against 5G core network functions using deception",
+            "Classify attacker techniques and intent from captured interaction data",
+            "Automatically synthesize candidate patches and configuration hardening",
+            "Keep the whole pipeline free of paid or cloud-locked dependencies"
         ],
-        "implementation": "Conceptual design includes autonomous flight capabilities, GPS navigation for precise planting locations, seed storage and dispensing mechanism, and environmental sensors for optimal planting conditions. The prototype focuses on mechanical design and flight path optimization algorithms.",
-        "results": "Completed conceptual design with detailed specifications. Prototype demonstrates feasibility of automated aerial seed planting with potential to cover 100+ acres per day.",
-        "github": "https://github.com/MrDezire/seed-drone"
+        "implementation": "free5GC is deployed as the target core. Current work is on the honeypot services that mimic vulnerable core interfaces and log every interaction, and on the machine learning pipeline that extracts features from session traces to profile attacker behavior. The planned final stage passes each incident summary to an Ollama-served Llama 3 or Mistral model that proposes code or configuration patches for review.",
+        "results": "In development - currently building out the honeypot deception layer and ML-based attacker profiling. LLM-driven patch synthesis and end-to-end evaluation are planned next.",
+        "github": null
     },
     {
-        "title": "MIMO QPSK System Simulation",
-        "description": "Performance analysis of MIMO communication system comparing ZF vs LMMSE BER",
-        "technologies": ["Python", "ZF vs LMMSE BER analysis"],
-        "detailedDescription": "A comprehensive simulation study of Multiple-Input Multiple-Output (MIMO) communication systems using Quadrature Phase Shift Keying (QPSK) modulation. The project analyzes and compares the performance of Zero Forcing (ZF) and Linear Minimum Mean Square Error (LMMSE) detection algorithms.",
+        "title": "AI-Powered Messenger App (\"Current\")",
+        "description": "Live in production on the Google Play Store. Privacy-first messenger with zero server-side message storage, end-to-end encryption, and WebRTC voice/video calling.",
+        "technologies": ["React Native", "Expo", "WebRTC", "Supabase", "E2E Encryption"],
+        "detailedDescription": "A production mobile messaging application, live on the Google Play Store, designed around a strict privacy model: messages are end-to-end encrypted and never persisted on the server, existing only in transit and on participating devices. The app supports one-to-one and group messaging, plus voice and video calling over WebRTC.",
         "objectives": [
-            "Analyze MIMO system performance",
-            "Compare ZF and LMMSE detection algorithms",
-            "Study BER performance under various conditions",
-            "Validate theoretical concepts through simulation"
+            "Deliver a messaging experience with no server-side message persistence",
+            "Implement end-to-end encryption for text, media, and calls",
+            "Provide low-latency voice and video calling with WebRTC",
+            "Ship and maintain a production release on the Google Play Store"
         ],
-        "implementation": "Implemented complete MIMO-QPSK system simulation in Python using NumPy and SciPy libraries. Developed signal generation, channel modeling, noise addition, and detection algorithms. Created comprehensive BER analysis framework with statistical significance testing.",
-        "results": "Successfully demonstrated that LMMSE outperforms ZF in low SNR conditions with 2-3 dB improvement in BER performance. Generated detailed performance curves and analysis reports.",
-        "github": "https://github.com/MrDezire/mimo-qpsk"
+        "implementation": "Built with React Native and Expo for cross-platform delivery. Message payloads are encrypted client-side and relayed through ephemeral channels backed by Supabase for authentication, presence, and signaling only, with no message bodies written to the database. WebRTC handles peer-to-peer audio and video, using the backend purely for session negotiation and TURN fallback.",
+        "results": "Live in production on the Google Play Store. Sustains real-time messaging and voice/video calls while keeping no readable message history on the server.",
+        "github": null
     },
     {
-        "title": "Load Balancer Implementation",
-        "description": "Network load balancer implementing Round Robin and Least Connection algorithms",
-        "technologies": ["Python", "Networking"],
-        "detailedDescription": "A network load balancing system that efficiently distributes incoming requests across multiple servers using advanced algorithms. The system implements both Round Robin and Least Connection strategies to optimize server utilization and response times.",
+        "title": "Drone ATC (Air Traffic Control) System",
+        "description": "Air traffic control system integrating Pixhawk flight controller telemetry via MAVLink with a Flask backend and two web portals (pilot registration and flight request management)",
+        "technologies": ["ESP8266", "Pixhawk", "MAVLink", "Flask", "Web Portals"],
+        "detailedDescription": "A ground-side air traffic control system for small unmanned aircraft. Live telemetry from a Pixhawk flight controller is carried over MAVLink to a Flask backend, which presents it to controllers for airspace coordination. Two web portals sit on top of the backend: one where pilots register their aircraft, and one where flight requests are submitted, reviewed, and approved or denied against current traffic.",
         "objectives": [
-            "Implement efficient load distribution",
-            "Compare different balancing algorithms",
-            "Optimize server utilization",
-            "Ensure high availability and performance"
+            "Carry real-time Pixhawk telemetry over MAVLink into a central backend",
+            "Let pilots register aircraft through a dedicated web portal",
+            "Provide a separate portal to submit, review, and manage flight requests",
+            "Give controllers a single view of active traffic and pending requests"
         ],
-        "implementation": "Built using Python with socket programming for network communication. Implemented request routing logic, server health monitoring, and dynamic algorithm switching. Created monitoring dashboard for real-time performance tracking and server status visualization.",
-        "results": "Achieved 40% improvement in response time and 25% better server utilization compared to simple round-robin approach. Successfully handled 1000+ concurrent connections.",
-        "github": "https://github.com/MrDezire/load-balancer"
-    },
-    {
-        "title": "AI Image Segmentation Deployment",
-        "description": "Web application for image segmentation using AI models",
-        "technologies": ["Flask", "NVIDIA DLI", "AI"],
-        "detailedDescription": "A web-based application that deploys advanced AI models for image segmentation tasks. The system provides an intuitive interface for users to upload images and receive precise segmentation results using state-of-the-art deep learning models.",
-        "objectives": [
-            "Deploy AI models for practical use",
-            "Create user-friendly web interface",
-            "Implement efficient image processing",
-            "Demonstrate real-world AI applications"
-        ],
-        "implementation": "Developed using Flask web framework with integration of pre-trained deep learning models from NVIDIA DLI. Implemented secure file upload, image preprocessing, model inference, and result visualization. Created RESTful API for programmatic access.",
-        "results": "Successfully deployed AI model with 92% segmentation accuracy. Web application handles multiple simultaneous users with average processing time of 3 seconds per image.",
-        "github": "https://github.com/MrDezire/ai-segmentation"
+        "implementation": "An ESP8266 relays MAVLink telemetry from the Pixhawk to a Flask backend over Wi-Fi, where position, altitude, and status messages are parsed and stored. The Flask application serves two web portals against that data - a pilot portal for aircraft registration and a flight-request portal for submitting and managing requests - and records flight state and controller decisions for later review.",
+        "results": "Successfully demonstrated end-to-end telemetry integration from Pixhawk through MAVLink to the backend, and the dual-portal workflow from aircraft registration through flight-request submission and controller approval.",
+        "github": null
     }
 ];
 
@@ -180,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Observe cards for staggered animation
-    const cards = document.querySelectorAll('.about-card, .skill-category, .project-card, .cert-card, .achievement-item');
+    const cards = document.querySelectorAll('.about-card, .skill-category, .experience-card, .achievement-card, .education-card, .project-card, .cert-card');
     cards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
         observer.observe(card);
@@ -209,33 +194,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Typing animation for hero title
-    function typeWriter(element, text, speed = 100) {
-        let i = 0;
-        element.innerHTML = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        
-        setTimeout(type, 1000); // Delay start of typing
-    }
-
-    // Initialize typing animation for hero title
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        
-        // Only run typing animation on larger screens
-        if (window.innerWidth > 768) {
-            typeWriter(heroTitle, originalText, 80);
-        }
-    }
-
     // Project Modal Functionality
     const modal = document.getElementById('project-modal');
     const modalTitle = document.getElementById('modal-title');
@@ -262,7 +220,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (modalDescription) modalDescription.textContent = project.detailedDescription;
         if (modalImplementation) modalImplementation.textContent = project.implementation;
         if (modalResults) modalResults.textContent = project.results;
-        if (modalGithub) modalGithub.href = project.github;
+        if (modalGithub) {
+            const linksWrap = modalGithub.closest('.project-links') || modalGithub;
+            if (project.github) {
+                modalGithub.href = project.github;
+                linksWrap.hidden = false;
+            } else {
+                modalGithub.removeAttribute('href');
+                linksWrap.hidden = true;
+            }
+        }
 
         // Clear and populate tech tags
         if (modalTechTags) {
@@ -308,15 +275,8 @@ document.addEventListener('DOMContentLoaded', function() {
     projectCards.forEach((card) => {
         // Get project index from data attribute
         const projectIndex = parseInt(card.getAttribute('data-project'), 10);
-        
-        // Enhanced hover effects
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-6px) scale(1.02)';
-        });
 
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(-6px)';
-        });
+        // Hover lift is handled by CSS :hover
 
         // Click handlers for both card and button
         const clickHandler = (e) => {
@@ -357,19 +317,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Enhanced certificate card interactions
+    // Certificate cards: hover lift is handled by CSS :hover
     const certCards = document.querySelectorAll('.cert-card');
-    certCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px) scale(1.02)';
-            this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-        });
-
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(-6px)';
-            this.style.boxShadow = '';
-        });
-    });
 
     // Skill tag hover effects
     const skillTags = document.querySelectorAll('.skill-tag');
@@ -447,13 +396,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enhanced Resume Download Functionality with correct PDF URL
+    // Resume download — served from the local file in the repo
     function downloadResume() {
         try {
             // Create a temporary anchor element for download
             const link = document.createElement('a');
-            link.href = 'https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/8e9cd23c40a25b097a7571b7c922e63e/54b84f1b-aa33-4ad7-96be-ca6ffad9e308/0f47492b.pdf';
-            link.download = 'Husenabasha_MS_Final_Resume.pdf';
+            link.href = 'Husenbasha_Sompur_Resume.pdf';
+            link.download = 'Husenbasha_Sompur_Resume.pdf';
             link.target = '_blank';
             
             // Append to body, click, and remove
